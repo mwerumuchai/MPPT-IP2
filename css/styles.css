@@ -87,6 +87,7 @@ text-align: center;
 #button{
   float: left;
   position: top;
+  color: #F15A29;
 }
 #col5 {
 background-image: url("../images/assets/backgrounds/foodsBg.jpg");
@@ -181,4 +182,67 @@ background-color: #F15A29;
     top: 15px;
     right: 35px;
   }
+}
+.multipletab{
+  width:100%;
+  margin:0 auto;
+  background:#eee;
+  overflow:hidden;
+  position:relative;
+}
+.tab-buttons{
+  display:inline-block;
+  width:100%;
+  border-bottom:2px solid #666;
+}
+.tab-buttons>span{
+  display:block;
+  float:left;
+  cursor:pointer;
+  color:#666;
+  font:400 30px 'pt sans',sans-serif;
+  background:#ddd;
+  padding:0 15px;
+  line-height:40px !important;
+}
+.tab-buttons>span.active{
+  background:#666;
+  color:#ddd;
+  position:relative;
+  box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+.tab-content{
+position:relative;
+}
+.tab-content>div{
+  position:absolute;
+  color:#666;
+  font-family:'pt sans',sans-serif;
+}
+.tab-nav{
+  opacity:0;
+  transition:all .3s linear;
+  -moz-transition:all .3s linear;
+  -webkit-transition:all .3s linear;
+}
+.multipletab:hover .tab-nav{
+  opacity:1;
+}
+.tab-nav>span{
+  position:absolute;
+  top:50%;
+  cursor:pointer;
+  display:block;
+  height:35px;
+  width:35px;
+}
+.tab-nav>span.next{
+  right:10px;
+  background:#666 url(https://lh4.googleusercontent.com/S2yrb7GoLLN7s1-NmlkE_nS9Svzr5DQNM3dcCCp2Occ=s25-no) no-repeat;
+  background-position:5px;
+}
+.tab-nav>span.prev{
+  left:10px;
+  background:#666 url(https://lh5.googleusercontent.com/-zhCZ92aPJSo/UzumzhVUMDI/AAAAAAAAEjA/Op4ySNrW3tk/s25-no/Left+Arrow.png) no-repeat;
+  background-position:5px;
 }

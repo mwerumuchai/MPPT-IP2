@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
       <meta  name="viewport" content="width=device-width, initial scale=1">
+
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
@@ -10,6 +11,7 @@
       <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!--Add jQuery-->
 
       <title>Anita's Kitchen</title>
       <meta name="description" content="" />
@@ -42,9 +44,9 @@
             <h2>We Provide The Best Food</h2>
             <h2>At The <strong>Right Price</strong></h2>
           </div>
+        </div>
       </div>
     </div>
-  </div>
 
     <div class="row">
       <div class="col-sm-3">
@@ -119,7 +121,119 @@
 
     <div class="container-fluid">
       <div id="col5" class="row">
-        <div class="col-sm-4 text-center" style="float:center;"></div>
+        <div class="col-sm-4 text-center" style="float:center;">
+          <div class='multipletab'>
+
+            <div class='tab-buttons'>
+
+              <span id='content1'>Fast Food</span>
+              <span id='content2'>Drinks</span>
+              <span id='content3'>Chicken</span>
+              <span id='content4'>Rice</span>
+    <!--add more button right after it with same id attribute of that container. Make sure to use span tag.-->
+            </div>
+            <div class='tab-content'>
+
+              <div id='content1'><img src="images/assets/fastfood/beefBurger.jpg"></div>
+              <div id='content2'></div>
+              <div id='content3'> </div>
+              <div id='content4'> </div>
+    <!--add more container right after it with same id attribute of that button. Make sure to use div tag.-->
+            </div>
+            <div class='tab-nav'>
+              <span class='next'></span>
+              <span class='prev'></span>
+            </div>
+          </div>
+          <script>
+          $(function () {
+    $.FindContainer = function () {
+        $('.tab-content>div').each(function findcontent() {
+            var newindex = $('.activetab').index();
+            var newheight = $('.activetab').height();
+            $('.tab-content').animate({
+                'height': newheight+200
+            }, 150);
+            var otherindex = $(this).index();
+            var substractindex = otherindex - newindex;
+            var currentwidth = $('.multipletab').width();
+            var newpositions = substractindex * currentwidth;
+            $(this).animate({
+                'left': newpositions
+            });
+        });
+    };
+    $.FindId = function () {
+        $('.tab-content>div').each(function () {
+            if ($(this).attr('id') == $('.active').attr('id')) {
+                $('.tab-content>div').removeClass('activetab');
+                $(this).addClass('activetab');
+            }
+        });
+    };
+    $('.tab-buttons>span').first().addClass('active');
+    $('.tab-content>div').each(function () {
+        var activeid = $('.active').attr('id');
+        if ($(this).attr('id') == activeid) {
+            $(this).addClass('activetab');
+        }
+        var currentheight = $('.activetab').height();
+        var currentwidth = $('.multipletab').width();
+        var currentindex = $(this).index();
+        var currentposition = currentindex * currentwidth;
+        $(this).css({
+            'left': currentposition,
+                'width': currentwidth - 40,
+                'padding': '10px 20px'
+        });
+        $(this).attr('data-position', currentposition);
+        $('.tab-content').css('height', currentheight+20);
+    });
+    $('.tab-buttons>span').click(function () {
+
+        $('.tab-buttons>span').removeClass('active');
+        $(this).addClass('active');
+        var currentid = $('.active').attr('id');
+        $.FindId();
+        $.FindContainer();
+    });
+    $('.next').click(function () {
+        var activetabindex = $('.activetab').index() + 1;
+        var containers = $('.tab-content>div').length;
+        if (containers == activetabindex) {
+            $('.tab-buttons>span').removeClass('active');
+            $('.tab-buttons>span').first().addClass('active');
+            var currentid = $('.active').attr('id');
+            $.FindId();
+            $.FindContainer();
+        } else {
+            var currentopen = $('.active').next();
+            $('.active').removeClass('active');
+            currentopen.addClass('active');
+            $.FindId();
+            $.FindContainer();
+        }
+    });
+  $('.prev').click(function(){
+    var activetabindex = $('.activetab').index();
+        if (activetabindex == 0) {
+            $('.tab-buttons>span').removeClass('active');
+            $('.tab-buttons>span').last().addClass('active');
+            var currentid = $('.active').attr('id');
+            $.FindId();
+            $.FindContainer();
+        } else {
+            var currentopen = $('.active').prev();
+            $('.active').removeClass('active');
+            currentopen.addClass('active');
+            $.FindId();
+            $.FindContainer();
+        }
+  });
+});
+</script>
+
+        </div>
       </div>
     </div>
 
@@ -158,9 +272,9 @@
               <h4>Thats What We Are</h4>
           </div>
           <div class="social">
-              <a href="#" target="_blank"><img src="images/assets/footerlogos/facebook.png"></a>
-              <a href="#" target="_blank"><img src="images/assets/footerlogos/twitter.png"></a>
-              <a href="#" target="_blank"><img src="images/assets/footerlogos/pinterest.png"></a>
+              <a href="#"><img src="images/assets/footerlogos/facebook.png"></a>
+              <a href="#"><img src="images/assets/footerlogos/twitter.png"></a>
+              <a href="#"><img src="images/assets/footerlogos/pinterest.png"></a>
           </div>
     </div>
     <p>2016 Menu Restaurant</>
