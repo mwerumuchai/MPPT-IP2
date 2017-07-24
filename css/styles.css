@@ -1,5 +1,5 @@
 .jumbotron{
- background-image: url("css/images/assets/backgrounds/landing.jpg");
+ background-image: url("images/assets/backgrounds/landing.jpg");
  background-size: cover;
  padding: 120px 30px;
  width: 100%;
@@ -62,7 +62,7 @@
 }
 
 #col3 {
-background-image: url("/home/muchai/Desktop/ip2/MPPT-IP2/css/images/assets/foodtop/lunch.jpg");
+background-image: url("images/assets/foodtop/lunch.jpg");
 padding-top:80px;
 padding-bottom:80px;
 color: #ffffff;
@@ -70,7 +70,7 @@ text-align: center;
 }
 
 #col4 {
-background-image: url("/home/muchai/Desktop/ip2/MPPT-IP2/css/images/assets/foodtop/dinner.jpg");
+background-image: url("images/assets/foodtop/dinner.jpg");
 padding-top:80px;
 padding-bottom:80px;
 color: #ffffff;
@@ -89,12 +89,12 @@ text-align: center;
   position: top;
 }
 #col5 {
-background-image: url("/home/muchai/Desktop/ip2/MPPT-IP2/css/images/assets/backgrounds/foodsBg.jpg");
+background-image: url("images/assets/backgrounds/foodsBg.jpg");
 padding-top:280px;
 padding-bottom:200px;
 }
 #col6 {
-background-image: url("/home/muchai/Desktop/ip2/MPPT-IP2/css/images/assets/backgrounds/subscribe.jpg");
+background-image: url("images/assets/backgrounds/subscribe.jpg");
 padding-top:100px;
 padding-bottom:100px;
 }
