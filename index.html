@@ -17,24 +17,34 @@
 
   </head>
   <body>
-    <div class="jumbotron">
-      <div class="container" onclick="myFunction(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </div>
-
-      <script>
-        function myFunction(x) {
-          x.classList.toggle("change");
+    <div class="jumbotron" >
+      <div class="row" id="firstrow">
+        <div  class="col-md-4 col-xs-12" id="firstrow-firstcol">
+          <span class="burger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+          <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+              <a href="#">Menu</a>
+              <a href="#">Events</a>
+              <a href="#">Contacts</a>
+            </div>
+          </div>
+          <script>
+            function openNav() {
+              document.getElementById("myNav").style.width = "100%";
             }
-      </script>
-      <div class="container text-center">
-        <img src="images/assets/logoBig.png" alt="img"class="img-responsive center-block">
-        <h2>We Provide The Best Food</h2>
-        <h2>At The <strong>Right Price</strong></h2>
+            function closeNav() {
+              document.getElementById("myNav").style.width = "0%";
+            }
+          </script>
+          <div class="container text-center">
+            <img src="images/assets/logoBig.png" alt="img"class="img-responsive center-block">
+            <h2>We Provide The Best Food</h2>
+            <h2>At The <strong>Right Price</strong></h2>
+          </div>
       </div>
     </div>
+  </div>
 
     <div class="row">
       <div class="col-sm-3">
@@ -128,7 +138,7 @@
    </div>
 
    <div class="container-fluid" >
-      <div id="col6"class="row text-center">
+      <div id="col6" class="row text-center">
         <h3>Get our daily food items delivered to your email</h3><br>
         <div>
           <form action="">
@@ -148,9 +158,9 @@
               <h4>Thats What We Are</h4>
           </div>
           <div class="social">
-              <a href="https://www.facebook.com/" target="_blank"><img src="images/assets/footerlogos/facebook.png"></a>
-              <a href="https://twitter.com/" target="_blank"><img src="images/assets/footerlogos/twitter.png"></a>
-              <a href="https://www.pininterest.com/" target="_blank"><img src="images/assets/footerlogos/pinterest.png"></a>
+              <a href="#" target="_blank"><img src="images/assets/footerlogos/facebook.png"></a>
+              <a href="#" target="_blank"><img src="images/assets/footerlogos/twitter.png"></a>
+              <a href="#" target="_blank"><img src="images/assets/footerlogos/pinterest.png"></a>
           </div>
     </div>
     <p>2016 Menu Restaurant</>
