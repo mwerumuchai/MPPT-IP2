@@ -130,9 +130,7 @@ padding-bottom:100px;
     border: 5px solid #ccc;
     border-top: none;
 }
-#footer {
-background-color: #F15A29;
-}
+
 .overlay {
     height: 100%;
     width: 0;
@@ -149,10 +147,10 @@ background-color: #F15A29;
 
 .overlay-content {
     position: relative;
-    top: 25%;
-    width: 100%;
+    top: 10%;
+    width: 50%;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .overlay a {
@@ -182,4 +180,47 @@ background-color: #F15A29;
     top: 15px;
     right: 35px;
   }
+}
+
+#footer{
+  height: 300px;
+  background-color: #F15A29;
+  color: white;
+  text-align: center;
+  padding-top: 7%;
+}
+#logos{
+  float: left;
+  padding: 30px;
+}
+
+.logo{
+  padding-right: 20px;
+}
+.footertext{
+  font-size: 10px;;
+}
+
+.fa {
+  padding: 14px;
+  font-size: 30px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 15px;
+}
+.fa-facebook {
+  background-image: url("../images/assets/footerlogos/facebook.png");
+  background-repeat: no-repeat;
+  color: #F15A29;
+}
+.fa-twitter {
+  background-image: url("../images/assets/footerlogos/twitter.png");
+  background-repeat: no-repeat;
+  color: #F15A29;
+}
+.fa-pinterest {
+  background-image: url("../images/assets/footerlogos/pinterest.png");
+  background-repeat: no-repeat;
+  color: #F15A29;
 }
