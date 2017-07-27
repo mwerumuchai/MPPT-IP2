@@ -27,29 +27,28 @@
 
   </head>
   <body>
-      <div class="jumbotron" >
-      <div class="row" id="firstrow">
-        <div  class="col-md-4 col-xs-12" id="firstrow-firstcol">
-          <span class="burger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-          <div id="myNav" class="overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="overlay-content">
-              <a href="#">Menu</a>
-              <a href="#">Events</a>
-              <a href="#">Contacts</a>
-            </div>
-          </div>
 
-          <div class="container text-center">
-            <img src="images/assets/logoBig.png" alt="img"class="img-responsive center-block">
-            <h2>We Provide The Best Food</h2>
-            <h2>At The <strong>Right Price</strong></h2>
+    <div class="jumbotron">
+      <div class="container-fluid text-left">
+        <span class="burger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="#">Menu</a>
+            <a href="#">Events</a>
+            <a href="#">Contacts</a>
           </div>
         </div>
       </div>
-    </div>
+      <div class="container text-center">
+        <img src="images/assets/logoBig.png" alt="img"class="img-responsive center-block">
+        <h2>We Provide The Best Food</h2>
+        <h2>At The <strong>Right Price</strong></h2>
+      </div>
+    </div><!-- end jumbotron -->
 
-    <div class="row">
+<div class="container-fluid">
+    <div class="row"><!-- start 2nd Section -->
       <div class="col-sm-3">
         <div id="row1" class="row">
           <h3>Happy Hour</h3>
@@ -68,20 +67,23 @@
         <h3><i>Dinner</i></h3>
       </div>
     </div>
-
-    <div id="FastFood" class="container">
-      <div class="row">
+  </div>
+<hr>
+<div class="container-fluid">
+    <div id="FastFood" class="container-fluid">
+      <div class="row3">
         <div class="col-sm-6">
-          <div class="img-thumbnail" style="float:right;"><span><img src="images/assets/fastFood1.jpg" class="img-responsive center-block"></span>
-            <div class="img-thumbnail" style="float:right;"><span><img src="images/assets/fastFood2.jpg" class="img-responsive center-block"></span>
+          <div id="thumbnail" class="img-thumbnail" style="float:right;">
+            <span><img src="images/assets/fastFood1.jpg" class="img-responsive center-block"></span>
+            <span><img src="images/assets/fastFood2.jpg" class="img-responsive center-block"></span>
             </div>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <h2>Fast Food</h2>
           <h4>You'll love our delicious fast food</h4>
           <p>Lorem ipsum dolor sit amet, consect adipisic
-            ing elit, sed do eiusmod tempor incididunt ut
+            ing elit, sed do eiusmod tempor incididunt ut<br>
             labore et dolore magna aliqua. Ut enim ad minim
             veniam, quis nostrud exercitation ullamco labor
             is nisi ut aliquip ex ea commodo consequat
@@ -93,9 +95,9 @@
         </div>
       </div>
     </div>
-
+<hr>
     <div id="Drinks" class="container">
-      <div class="row">
+      <div class="row4">
         <div class="col-sm-6 text-right">
           <h2>Drinks</h2>
           <h3>We also produce delicious drinks</h3>
@@ -117,20 +119,23 @@
         </div>
       </div>
     </div>
-
+<hr>
     <div class="col5" class="container-fluid" >
+      <div class="container section4">
             <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#fastfood" id="activetab">Fast Food</a></li>
                 <li><a data-toggle="tab" href="#drinks">Drinks</a></li>
                 <li><a data-toggle="tab" href="#chicken">Chicken</a></li>
                 <li><a data-toggle="tab" href="#rice">Rice</a></li>
               </ul><br><br><br>
+      </div>
     </div>
-
+<hr>
     <!--About staff-->
     <div class="container-fluid" >
+      <div class="container">
        <div id="col6" class="row5">
-          <div class="col-md-7 col-xs-12">
+          <div class="col-md-8 col-xs-12">
              <h4>Our Happy Customers</h4> <br> <h4 id="customer-name">George Richards</h4>
               <p class="customer-text">Great Food! menu is awesome, their food is not only great but at the right price. I'll highly recommend them :)</p>
               <div id="customers">
@@ -142,13 +147,14 @@
               </div>
           </div>
           <div class="col-md-1 col-xs-12" id="rule"></div>
-          <div class="col-md-4 col-xs-12"> <h4>About Menu</h4> <br> <p class="customer-text" >We are menu, a little team of seven members.Ut wisi enim ad minim veniam, quis nos trudexer ci tation uliamcorper suscipit lob ortis nisi ut ex ea commodo conse quat. Duisau tem vel eum iriure dotor in,.</p>
+          <div class="col-md-3 col-xs-12"> <h4>About Menu</h4> <br> <p class="customer-text" >We are menu, a little team of seven members.Ut wisi enim ad minim veniam, quis nos trudexer ci tation uliamcorper suscipit lob ortis nisi ut ex ea commodo conse quat. Duisau tem vel eum iriure dotor in,.</p>
          </div>
+       </div>
       </div>
     </div>
-
+<hr>
     <form>
-      <p class="subscribe">Get our daily food items delivered to you by email</p><br>
+      <p class="subscribe"><h2>Get our daily food items delivered to you by email</h2></p><br>
       <input type="email" name="email" placeholder="Your email"  size="50">
       <button type="subscribe" >Subscribe</button>
     </form>
